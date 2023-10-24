@@ -1,3 +1,6 @@
+import { JournalForm } from "./JournalForm"
+import { JournalList } from "./JournalList"
+import { Weather } from "./Weather"
 
 
 export const MyJournal = () => {
@@ -8,19 +11,21 @@ export const MyJournal = () => {
     <section className="section">
         <div className="container">
             <h1 className="title">
-                Hello World
+                My Journal
             </h1>
             <p className="subtitle">
-                 My first website with <strong>Bulma</strong>!
+                 Tell me how you really feel
             </p>
+            <div className="columns">
+                <div className="column is-three-fifths">
+                    <JournalForm  />
+                </div>
+                <div className="column">
+                    <Weather  />
+                </div>
+            </div>
+            <JournalList />
     
-    <div className="field">
-        <label className="label">Label</label>
-        <div className="control">
-            <input className="input" type="text" placeholder="Text input" />
-        </div>
-            <p className="help">This is a help text</p>
-        </div>
     </div>
     </section>
     
