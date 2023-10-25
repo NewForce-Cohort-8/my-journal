@@ -1,6 +1,6 @@
-import { JournalForm } from "./JournalForm"
-import { JournalList } from "./JournalList"
-import { Weather } from "./Weather"
+import { JournalForm } from "./journal/JournalForm"
+import { JournalList } from "./journal/JournalList"
+import { Weather } from "./weather/Weather"
 
 
 export const MyJournal = () => {
