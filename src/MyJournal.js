@@ -1,10 +1,36 @@
+import { useEffect, useState } from "react"
 import { JournalForm } from "./journal/JournalForm"
 import { JournalList } from "./journal/JournalList"
 import { Weather } from "./weather/Weather"
+import { getAllJournalEntries } from "./APIManager"
 
 
 export const MyJournal = () => {
+    const [journalEntries, setJournalEntries ] = useState([])
 
+    useEffect(
+        () => {
+          getAllJournalEntries()
+          .then((journalArray) => {
+            setJournalEntries(journalArray)
+          })
+        },
+        [] //where we observe state - if empty we are just watching intial component state
+      )
+
+      const updateJournalState = () => {
+        return getAllJournalEntries()
+          .then((journalArray) => {
+            setJournalEntries(journalArray)
+          })
+        }
+        const deleteJournalEntry = (id)=> {
+            return fetch(`  http://localhost:8088/journalEntries/${id}`, {method: "DELETE"})
+            .then(updateJournalState)
+          }
+      
+
+      
 
     return (
         
@@ -18,13 +44,13 @@ export const MyJournal = () => {
             </p>
             <div className="columns">
                 <div className="column is-three-fifths">
-                    <JournalForm  />
+                    <JournalForm updateJournalState={updateJournalState} />
                 </div>
                 <div className="column">
                     <Weather  />
                 </div>
             </div>
-            <JournalList />
+            <JournalList journalEntries={journalEntries} deleteJournalEntry={deleteJournalEntry}/>
     
     </div>
     </section>
@@ -33,3 +59,10 @@ export const MyJournal = () => {
 
 
 }
+
+
+/////future features
+
+// sort entries by mood
+
+//users can see their own post.

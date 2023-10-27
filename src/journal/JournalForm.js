@@ -3,7 +3,7 @@ import { MoodSelect } from "./MoodSelect"
 
 
 
-export const JournalForm = () => {
+export const JournalForm = ({updateJournalState}) => {
  const [journalEntry, setJournalEntry] = useState({})
 
  const handleControlledInputChange = (e) => {
@@ -30,7 +30,7 @@ export const JournalForm = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(entryToSend),
-        })
+        }).then(updateJournalState)
  }
 
 
