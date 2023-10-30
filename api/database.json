@@ -35,6 +35,14 @@
     {
       "name": "sleepy",
       "id": 4
+    },
+    {
+      "name": "Big Sad",
+      "id": 5
+    },
+    {
+      "name": "Super Big Sad",
+      "id": 6
     }
   ],
   "journalEntries": [
@@ -61,6 +69,14 @@
       "dateTime": "2023-10-25",
       "moodId": 3,
       "userId": 3
+    },
+    {
+      "title": "Still Feeling like a monday",
+      "entryText": "Oh noooo ... let's add some more chaos",
+      "dateTime": "2023-10-31",
+      "moodId": 6,
+      "userId": 1,
+      "id": 4
     }
   ]
 }
