@@ -53,6 +53,7 @@ export const MyJournal = () => {
             <JournalList journalEntries={journalEntries} deleteJournalEntry={deleteJournalEntry} updateJournalState={updateJournalState}/>
     
     </div>
+    
     </section>
     
     )

@@ -51,7 +51,7 @@
       "title": "Title",
       "entryText": "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.",
       "dateTime": "2023-10-25",
-      "moodId": 1,
+      "moodId": 5,
       "userId": 1
     },
     {
@@ -77,6 +77,24 @@
       "moodId": 6,
       "userId": 1,
       "id": 4
+    },
+    {
+      "title": "It's so cold",
+      "dateTime": "2023-10-31",
+      "moodId": 5,
+      "entryText": "Not a fan of these extreeeeeeemely cold temperatures.",
+      "userId": 1,
+      "id": 5,
+      "mood": {
+        "name": "Super Big Sad",
+        "id": 6
+      },
+      "user": {
+        "id": 1,
+        "email": "sarah@sarah.com",
+        "password": "123",
+        "username": "trisarahtops"
+      }
     }
   ]
 }

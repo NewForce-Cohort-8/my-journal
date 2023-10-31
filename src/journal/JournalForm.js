@@ -30,7 +30,8 @@ export const JournalForm = ({updateJournalState}) => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(entryToSend),
-        }).then(updateJournalState)
+        }).then(r => r.json())
+        .then(r => setJournalEntry({})).then(updateJournalState)
  }
 
 
